@@ -1,0 +1,24 @@
+{
+  "name": "hodfr",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "repository": "git@github.com:shuttlethread/hodfr.git",
+  "author": "Jamie Lentin <jm@lentin.co.uk>",
+  "license": "GPL-3.0",
+  "scripts": {
+    "lint": "jslint */*.js",
+    "build-mkdir": "mkdir -p inst/www",
+    "build-css": "cat node_modules/handsontable/dist/handsontable.min.css > inst/www/hodfr.min.css",
+    "build-js": "browserify --debug lib/index.js | uglifyjs --compress --source-map --output inst/www/hodfr.min.js",
+    "build": "npm-run-all lint build-mkdir build-css build-js"
+  },
+  "dependencies": {
+    "hodf": "git://github.com/shuttlethread/hodf.git"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "jslint": "^0.12.1",
+    "npm-run-all": "^4.1.5",
+    "uglify-js": "^3.4.10"
+  }
+}
