@@ -5,24 +5,22 @@ hodfr <- function(inputId,
                   values = list(list(name = "value", title = "Value")),
                   params = list(),
                   orientation = "horizontal") {
-  addResourcePath(
-    prefix = 'hodfr', directoryPath = system.file('www', package='hodfr')
-  )
 
-  tagList(
+    addResourcePath(
+        prefix = 'hodfr', directoryPath = system.file('www', package='hodfr'))
 
-    singleton(tags$head(
-      tags$script(src="hodfr/hodfr.min.js"),
-      tags$link(rel="stylesheet", type="text/css", href="hodfr/hodfr.min.css")
-    )),
+    tagList(
+        singleton(tags$head(
+            tags$script(src="hodfr/hodfr.min.js"),
+            tags$link(rel="stylesheet", type="text/css", href="hodfr/hodfr.min.css"))),
 
-    tags$div(id = inputId,
-        "data-tmpl" = jsonlite::toJSON(list(
-            orientation = orientation,
-            fields = fields,
-            values = values,
-            params = params), auto_unbox = TRUE),
-        class = "hodfr"),
+        tags$div(id = inputId,
+            "data-tmpl" = jsonlite::toJSON(list(
+                orientation = orientation,
+                fields = fields,
+                values = values,
+                params = params), auto_unbox = TRUE),
+            class = "hodfr"),
 
     "")
 }
@@ -30,7 +28,7 @@ hodfr <- function(inputId,
 
 # Send a new value to Hodf
 updateHodfrInput <- function(session, inputId, value = data.frame()) {
-  session$sendInputMessage(inputId, list(value = hodfr_jsonframe(value)))
+    session$sendInputMessage(inputId, list(value = hodfr_jsonframe(value)))
 }
 
 
