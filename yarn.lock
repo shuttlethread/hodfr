@@ -551,7 +551,7 @@ hmac-drbg@^1.0.0:
 
 "hodf@git://github.com/shuttlethread/hodf.git":
   version "0.1.0"
-  resolved "git://github.com/shuttlethread/hodf.git#84345c2069adcbab8a4e1b99db8c76ebda00ffba"
+  resolved "git://github.com/shuttlethread/hodf.git#b901b94129fa16bcf6c932ca860a9d99b63a2d53"
   dependencies:
     handsontable "^0.34.5"
     jquery "^3.2.1"
