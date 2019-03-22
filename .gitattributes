@@ -1,2 +1,3 @@
 *.min.js	binary
+*.min.js.map	binary
 *.min.css	binary
