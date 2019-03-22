@@ -1,3 +1,4 @@
+library(shiny)
 library(jsonlite)
 
 hodfr <- function(inputId,
@@ -5,6 +6,10 @@ hodfr <- function(inputId,
                   values = list(list(name = "value", title = "Value")),
                   params = list(),
                   orientation = "horizontal") {
+    # Convert incoming data into a proper data.frame
+    shiny::registerInputHandler("hodfr.jsonframe", function(x, shinysession, name) {
+        hodfr_dataframe(x)
+    }, force = TRUE)
 
     addResourcePath(
         prefix = 'hodfr', directoryPath = system.file('www', package='hodfr'))

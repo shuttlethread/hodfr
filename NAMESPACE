@@ -1,4 +1,3 @@
 # R/hodfr.R
 export(hodfr)
 export(updateHodfrInput)
-export(hodfr_dataframe)
