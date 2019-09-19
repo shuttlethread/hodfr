@@ -36,9 +36,8 @@ For a complete example, look at the [example.R](example.R) script.
 ## HODFR Development
 
 The package includes precompiled javascript sources, to make any changes to
-javascript you need to re-build this first with:
-
-    yarn run build
+javascript you need to re-build this as well as the package with either ``make
+build``, or ``make install`` to rebuild and install the built R package.
 
 ## References
 
