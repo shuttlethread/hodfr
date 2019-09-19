@@ -74,6 +74,10 @@ base64-js@^1.0.2:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
 
+bignumber.js@^8.0.1:
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/bignumber.js/-/bignumber.js-8.1.1.tgz#4b072ae5aea9c20f6730e4e5d529df1271c4d885"
+
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
@@ -505,12 +509,12 @@ graceful-fs@^4.1.2:
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
 
-handsontable@^0.34.5:
-  version "0.34.5"
-  resolved "https://registry.yarnpkg.com/handsontable/-/handsontable-0.34.5.tgz#9cb1a85f6b497902a094c5715595b2de51ede00c"
+handsontable@^6.2.2:
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/handsontable/-/handsontable-6.2.2.tgz#f1250f3f374abdf7d4a0080950482d3edeea8f07"
   dependencies:
-    moment "2.18.1"
-    numbro "1.11.0"
+    moment "2.20.1"
+    numbro "^2.0.6"
     pikaday "1.5.1"
 
 has-flag@^3.0.0:
@@ -551,9 +555,9 @@ hmac-drbg@^1.0.0:
 
 "hodf@git://github.com/shuttlethread/hodf.git":
   version "0.1.0"
-  resolved "git://github.com/shuttlethread/hodf.git#996743039c647b62b02b91161e7efdc5b8f229d4"
+  resolved "git://github.com/shuttlethread/hodf.git#4d091abfdfa5946a78a990b3647072a7848b1c6c"
   dependencies:
-    handsontable "^0.34.5"
+    handsontable "^6.2.2"
     jquery "^3.2.1"
 
 hosted-git-info@^2.1.4:
@@ -767,9 +771,9 @@ module-deps@^6.0.0:
     through2 "^2.0.0"
     xtend "^4.0.0"
 
-moment@2.18.1:
-  version "2.18.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
+moment@2.20.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.20.1.tgz#d6eb1a46cbcc14a2b2f9434112c1ff8907f313fd"
 
 moment@2.x:
   version "2.24.0"
@@ -809,9 +813,11 @@ npm-run-all@^4.1.5:
     shell-quote "^1.6.1"
     string.prototype.padend "^3.0.0"
 
-numbro@1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/numbro/-/numbro-1.11.0.tgz#39aa17b358b4682aec8ca0d5755f35c5d9ce8f9e"
+numbro@^2.0.6:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/numbro/-/numbro-2.1.2.tgz#2d51104f09b5d69aef7e15bb565d7795e47ecfd6"
+  dependencies:
+    bignumber.js "^8.0.1"
 
 object-keys@^1.0.12:
   version "1.1.1"
