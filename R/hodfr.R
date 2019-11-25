@@ -5,6 +5,7 @@ hodfr <- function(inputId,
                   fields,
                   values = list(list(name = "value", title = "Value")),
                   params = list(),
+                  js_debug = FALSE,
                   orientation = "horizontal") {
     # Convert incoming data into a proper data.frame
     shiny::registerInputHandler("hodfr.jsonframe", function(x, shinysession, name) {
@@ -25,7 +26,9 @@ hodfr <- function(inputId,
                 fields = fields,
                 values = values,
                 params = params), auto_unbox = TRUE),
-            class = "hodfr"),
+            class = paste(
+                ifelse(isTRUE(js_debug), 'js-debug', ''),
+                "hodfr")),
 
     "")
 }
