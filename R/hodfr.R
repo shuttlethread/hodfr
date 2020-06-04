@@ -12,15 +12,15 @@ hodfr <- function(inputId,
         hodfr_dataframe(x)
     }, force = TRUE)
 
-    addResourcePath(
+    shiny::addResourcePath(
         prefix = 'hodfr', directoryPath = system.file('www', package='hodfr'))
 
-    tagList(
-        singleton(tags$head(
-            tags$script(src="hodfr/hodfr.min.js"),
-            tags$link(rel="stylesheet", type="text/css", href="hodfr/hodfr.min.css"))),
+    shiny::tagList(
+        shiny::singleton(shiny::tags$head(
+            shiny::tags$script(src="hodfr/hodfr.min.js"),
+            shiny::tags$link(rel="stylesheet", type="text/css", href="hodfr/hodfr.min.css"))),
 
-        tags$div(id = inputId,
+        shiny::tags$div(id = inputId,
             "data-tmpl" = jsonlite::toJSON(list(
                 orientation = orientation,
                 fields = fields,

@@ -12,7 +12,8 @@ License: GPL (>= 3)
 Depends:
     R (>= 3.0.0)
 Imports:
-    jsonlite
+    jsonlite,
+    shiny
 Suggests: 
 BugReports: https://github.com/shuttlethread/hodfr/issues
 LazyData: yes
