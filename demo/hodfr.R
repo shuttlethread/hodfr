@@ -1,6 +1,6 @@
 # Example HODF application
 #
-# Run with Rscript example.R and visit http://localhost:9755
+# Run with demo('example', 'hodfr') and visit http://localhost:9755
 library(hodfr)
 library(shiny)
 
