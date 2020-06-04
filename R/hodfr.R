@@ -43,7 +43,7 @@ updateHodfrInput <- function(session, inputId, value = data.frame()) {
 # Inverse of hodfr_dataframe
 hodfr_jsonframe <- function (input_df) {
     l <- as.list(input_df)
-    l$`_headings` <- list(
+    l[['_headings']] <- list(
         fields = colnames(input_df),
         values = rownames(input_df))
 
@@ -66,7 +66,7 @@ hodfr_dataframe <- function (input_val) {
     # Take a FFDB data.frame structure and convert it into R
     json_df <- jsonlite::fromJSON(input_val)
     do.call(data.frame, c(list(
-            row.names = json_df$`_headings`$values,
+            row.names = json_df[['_headings']]$values,
             stringsAsFactors = FALSE
-        ), lapply(json_df[json_df$`_headings`$fields], to_numeric_or_char)))
+        ), lapply(json_df[json_df[['_headings']]$fields], to_numeric_or_char)))
 }
