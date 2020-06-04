@@ -1,5 +1,7 @@
 # HODFR: Hands-on-dataframe Shiny adapter
 
+[![Build Status](https://travis-ci.org/shuttlethread/hodfr.svg?branch=master)](https://travis-ci.org/shuttlethread/hodfr)
+
 A Shiny input widget using [hodf](https://github.com/shuttlethread/hodf), allowing collection of data.frame objects with variable column widths.
 
 ![hodfr screenshot](https://raw.githubusercontent.com/shuttlethread/hodf/master/screenshot.png)
