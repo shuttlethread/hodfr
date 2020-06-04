@@ -4,6 +4,8 @@
 library(hodfr)
 library(shiny)
 
+js_debug <- FALSE  # Turn TRUE to enable JS debugging
+
 shinyApp(
     ui = bootstrapPage(
         hodfr(
@@ -12,7 +14,8 @@ shinyApp(
             # We want columns called "species", 3 by default.
             fields = list(type = "bins", max = 3, prefix = list(name = 'species_', title = 'Species ')),
             # We want rows 2000..2010
-            values = list(type = "year", min = 2000, max = 2010)),
+            values = list(type = "year", min = 2000, max = 2010),
+            js_debug = js_debug),
         # Example controls to show how to use output
         plotOutput('plot'),
         verbatimTextOutput("dataframe")),
