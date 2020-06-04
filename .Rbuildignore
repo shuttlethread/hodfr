@@ -1,1 +1,11 @@
+^\.git
+^\.travis.yml
+^Makefile
+^[^/]+\.tar\.gz
+^\.bash_history\.*
+^.zenodo.json$
+
+^lib$
 ^node_modules$
+^yarn.lock$
+^package.json$
