@@ -4,12 +4,14 @@ TARBALL=$(PACKAGE)_$(VERSION).tar.gz
 
 all: check
 
-install:
+yarn-build:
+	yarn install --link-duplicates --frozen-lockfile
 	yarn build
+
+install: yarn-build
 	R CMD INSTALL --install-tests --html --example .
 
-build:
-	yarn build
+build: yarn-build
 	R CMD build .
 
 check: build
@@ -25,4 +27,4 @@ check-as-cran: build
 #  Upload to CRAN
 #  git push && git push --tags
 
-.PHONY: all install build check check-as-cran
+.PHONY: all yarn-build install build check check-as-cran
