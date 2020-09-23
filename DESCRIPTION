@@ -1,13 +1,16 @@
 Encoding: UTF-8
 Package: hodfr
 Type: Package
-Title: HandsOnDataFrameR
+Title: Hands-on-Data-Frame for R
 Version: 1.0-0
 Date: 2017-11-01
 Authors@R:
     c(person('Jamie','Lentin',email='lentinj@shuttlethread.com',role=c('aut','cre')))
+Maintainer: Jamie Lentin <lentinj@shuttlethread.com>
 Description:
-    Wrap HandsOnDataTable in shiny binding.
+    A Shiny widget that lets you add a dynamically-sized data.frame using
+    Handsontable, a javascript spreadsheet. Templates let you choose bounds for
+    the number and type of columns and rows.
 License: GPL (>= 3)
 Depends:
     R (>= 3.0.0)
