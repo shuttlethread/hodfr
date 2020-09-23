@@ -33,7 +33,7 @@ You can also update the data.frame contents from R with:
 
     hodfr::updateHodfrInput(session, "catch_at_age", new_data)
 
-For a complete example, look at the [demo/example.R](demo/example.R) script.
+For a complete example, look at the [demo/hodfr.R](https://github.com/shuttlethread/hodfr/blob/master/demo/hodfr.R) script.
 
 ## HODFR Development
 
