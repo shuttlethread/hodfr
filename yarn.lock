@@ -540,9 +540,9 @@ hmac-drbg@^1.0.0:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-"hodf@git://github.com/shuttlethread/hodf.git":
-  version "0.1.0"
-  resolved "git://github.com/shuttlethread/hodf.git#c33341ab76f8be7495696eaabf05aa2cbf9889a5"
+"hodf@https://github.com/shuttlethread/hodf.git":
+  version "0.9.1"
+  resolved "https://github.com/shuttlethread/hodf.git#7e7b263bc5133edf0e64517340a76e58d97588a6"
   dependencies:
     handsontable "^6.2.2"
     jquery "^3.2.1"

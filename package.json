@@ -13,7 +13,7 @@
     "build": "npm-run-all lint build-mkdir build-css build-js"
   },
   "dependencies": {
-    "hodf": "git://github.com/shuttlethread/hodf.git"
+    "hodf": "https://github.com/shuttlethread/hodf.git"
   },
   "devDependencies": {
     "browserify": "^16.2.3",
