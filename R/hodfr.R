@@ -43,6 +43,7 @@ updateHodfrInput <- function(session, inputId, value = data.frame()) {
 
 
 # Trigger a redraw (because the element is now visible
+# See: https://forum.handsontable.com/t/hot-instances-on-an-initially-hidden-tab-dont-render-until-clicked/1864
 renderHodfrInput <- function(session, inputId) {
     session$sendInputMessage(inputId, list(render = TRUE))
 }

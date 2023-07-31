@@ -1,6 +1,7 @@
 \name{hodfr}
 \alias{hodfr}
 \alias{updateHodfrInput}
+\alias{renderHodfrInput}
 
 \title{Hands-On-Data-Frame R}
 \description{
@@ -17,6 +18,8 @@ hodfr(inputId,
       orientation = "horizontal")
 
 updateHodfrInput(session, inputId, value = data.frame())
+
+renderHodfrInput(session, inputId)
 }
 
 \arguments{
@@ -35,6 +38,9 @@ updateHodfrInput(session, inputId, value = data.frame())
 
 \code{fields}, \code{values}, \code{orientation} are hodf parameters, see hodf documentation for more details:
 \url{https://github.com/shuttlethread/hodf/blob/master/README.md#templates}.
+
+\code{renderHodfrInput} forces a data table to be redrawn.
+This may be required if the table is initially hidden, e.g. on a different tab. See example:
 }
 
 \examples{
@@ -64,5 +70,23 @@ if (interactive()) {
             plot.ts(input$demo_table)
         })
       })
+
+      shinyApp(
+        ui = bootstrapPage(tabsetPanel(
+          id = 'tabset',
+          tabPanel('tab1_tab', hodfr('tab1_df', fields = list(
+              # One year column
+              list(name = 'year', title = 'Year')))),
+          tabPanel('tab2_tab', hodfr('tab2_df', fields = list(
+              # Year & step column
+              list(name = 'year', title = 'Year'),
+              list(name = 'step', title = 'Step')))),
+          NULL)),
+        server = function(input, output, session) {
+          observeEvent(input$tabset, {
+            # Re-render table for visible tab
+            renderHodfrInput(session, gsub('_tab$', '_df', input$tabset))
+          })
+        })
 }
 }

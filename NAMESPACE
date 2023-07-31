@@ -1,3 +1,4 @@
 # R/hodfr.R
 export(hodfr)
 export(updateHodfrInput)
+export(renderHodfrInput)
