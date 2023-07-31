@@ -42,6 +42,12 @@ updateHodfrInput <- function(session, inputId, value = data.frame()) {
 }
 
 
+# Trigger a redraw (because the element is now visible
+renderHodfrInput <- function(session, inputId) {
+    session$sendInputMessage(inputId, list(render = TRUE))
+}
+
+
 # Inverse of hodfr_dataframe
 hodfr_jsonframe <- function (input_df) {
     l <- as.list(input_df)
