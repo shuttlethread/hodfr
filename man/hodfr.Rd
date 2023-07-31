@@ -12,6 +12,7 @@ hodfr(inputId,
       fields,
       values = list(list(name = "value", title = "Value")),
       params = list(),
+      value = data.frame(),
       js_debug = FALSE,
       orientation = "horizontal")
 
@@ -26,7 +27,7 @@ updateHodfrInput(session, inputId, value = data.frame())
     \item{orientation}{hodf orientation.}
     \item{js_debug}{Display debug messages in javascript console.}
     \item{session}{The \code{session} object passed to function given to \code{shinyServer}.}
-    \item{value}{The value to set for the input object.}
+    \item{value}{The initial \link{data.frame} to populate the table with}
 }
 
 \details{

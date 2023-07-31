@@ -5,6 +5,7 @@ hodfr <- function(inputId,
                   fields,
                   values = list(list(name = "value", title = "Value")),
                   params = list(),
+                  value = data.frame(),
                   js_debug = FALSE,
                   orientation = "horizontal") {
     # Convert incoming data into a proper data.frame
@@ -26,6 +27,7 @@ hodfr <- function(inputId,
                 fields = fields,
                 values = values,
                 params = params), auto_unbox = TRUE),
+            "data-initial-value" = hodfr_jsonframe(value),
             class = paste(
                 ifelse(isTRUE(js_debug), 'js-debug', ''),
                 "hodfr")),
